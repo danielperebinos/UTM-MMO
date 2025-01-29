@@ -25,14 +25,14 @@ prob += (
 for w in fabrics:
     prob += (
         lpSum([vars[w][b] for b in deposits]) <= supply[w],
-        f"Sum_of_Products_out_of_Warehouse_{w}",
+        f"Sum_of_Products_out_of_Fabric_{w}",
     )
 
 # The demand minimum constraints are added to prob for each demand node (bar)
 for b in deposits:
     prob += (
         lpSum([vars[w][b] for w in fabrics]) >= demand[b],
-        f"Sum_of_Products_into_Bar{b}",
+        f"Sum_of_Products_into_Deposit{b}",
     )
 
 print(prob)
