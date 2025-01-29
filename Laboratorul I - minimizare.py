@@ -2,14 +2,14 @@ from scipy.optimize import linprog
 
 c = [2000, 1200, 2200, 1300, 2500]
 A = [
-    [-1, -1,  0,  0,  0],
-    [ 0,  0, -1, -1,  0],
+    [-1, -0.5,  0,  0,  0],
+    [ 0,  0, -1, -0.5,  0],
     [ 0,  0,  0,  0, -1],
     [ 1,  1,  1,  1,  1],
 ]
 b = [-10, -12, -5, 30]
 x_bounds = [(0, None) for _ in range(5)]
-result = linprog(c, A_ub=A, b_ub=b, bounds=x_bounds, method="highs")
+result = linprog(c, A_ub=A, b_ub=b, bounds=x_bounds, method="simplex")
 
 if result.success:
     print("Soluție optimă găsită:")

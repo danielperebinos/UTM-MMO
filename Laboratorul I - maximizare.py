@@ -9,7 +9,7 @@ A = [
 ]
 b = [1000, 100, 200, 0]
 x_bounds = [(0, None) for _ in range(5)]
-result = linprog(c, A_ub=A, b_ub=b, bounds=x_bounds, method="highs")
+result = linprog(c, A_ub=A, b_ub=b, bounds=x_bounds, method="simplex")
 
 if result.success:
     print("Soluție optimă găsită:")
