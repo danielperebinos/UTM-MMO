@@ -18,6 +18,6 @@ if result.success:
     print(f"x3 (După-amiază, Full-time): {result.x[2]:.2f} angajați")
     print(f"x4 (După-amiază, Part-time): {result.x[3]:.2f} angajați")
     print(f"x5 (Noapte, Full-time): {result.x[4]:.2f} angajați")
-    print(f"Cost total minim: {result.fun:.2f} RON")
+    print(f"Cost total minim: {result.fun:.2f}")
 else:
     print("Nu s-a găsit o soluție optimă.")

@@ -18,6 +18,6 @@ if result.success:
     print(f"x3 (Standard): {result.x[2]:.2f} bilete")
     print(f"x4 (Reducere Studenți): {result.x[3]:.2f} bilete")
     print(f"x5 (Acces General): {result.x[4]:.2f} bilete")
-    print(f"Venit total maxim: {-result.fun:.2f} RON")
+    print(f"Venit total maxim: {-result.fun:.2f}")
 else:
     print("Nu s-a găsit o soluție optimă.")
